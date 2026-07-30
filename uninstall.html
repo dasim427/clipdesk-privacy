@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clip Desk — uninstalled</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+    max-width: 38rem;
+    font: 16px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1a1a1e;
+    background: #fff;
+  }
+  h1 { font-size: 1.7rem; margin: 0 0 .3em; letter-spacing: -.02em; }
+  .lead { color: #55555f; margin: 0 0 2em; }
+  fieldset { border: 0; margin: 0 0 1.4em; padding: 0; }
+  label {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 9px 12px;
+    border: 1px solid #e3e3e8;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    cursor: pointer;
+  }
+  label:hover { border-color: #b18cff; }
+  input[type="radio"] { margin-top: 4px; }
+  textarea {
+    width: 100%;
+    min-height: 110px;
+    padding: 10px 12px;
+    border: 1px solid #e3e3e8;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 15px;
+    resize: vertical;
+    background: #fff;
+    color: inherit;
+  }
+  textarea:focus, label:focus-within { outline: 2px solid #8b45ff; outline-offset: 1px; }
+  .send {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 10px 22px;
+    border: 0;
+    border-radius: 8px;
+    background: #6d28d9;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .send:hover { background: #5b21b6; }
+  .note { color: #6b6b76; font-size: .9rem; margin-top: 1.6em; }
+  .switch { font-size: .95rem; margin: 0 0 2em; }
+  a { color: #6d28d9; }
+  footer { margin-top: 3em; color: #6b6b76; font-size: .9rem; }
+  [hidden] { display: none !important; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e7e7ea; background: #131316; }
+    .lead, .note, footer { color: #9a9aa4; }
+    label, textarea { border-color: #2c2c33; background: #1a1a1e; }
+    a { color: #b18cff; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ------------------------------------------------------------- English -->
+<section id="en">
+  <h1>Clip Desk is gone. What went wrong?</h1>
+  <p class="lead">One question, and it genuinely changes what gets built next.
+  There is no tracking in the extension, so this page is the only way to hear
+  from you at all.</p>
+  <p class="switch"><a href="?lang=ru">Русская версия</a></p>
+
+  <form data-form="en">
+    <fieldset>
+      <label><input type="radio" name="reason" value="Did not work / could not sign in"> It did not work — sign-in or sync failed</label>
+      <label><input type="radio" name="reason" value="Too slow"> Too slow, or it did not read the whole archive</label>
+      <label><input type="radio" name="reason" value="Missing a feature"> A feature I needed is missing</label>
+      <label><input type="radio" name="reason" value="Not what I expected"> Not what I expected from the store page</label>
+      <label><input type="radio" name="reason" value="Just testing / no longer needed"> Just testing, or I do not need it any more</label>
+      <label><input type="radio" name="reason" value="Other"> Something else</label>
+    </fieldset>
+
+    <textarea name="comment" placeholder="What happened, in your own words. This is the part that helps most."></textarea>
+    <br>
+    <button type="submit" class="send">Send</button>
+  </form>
+
+  <p class="note">The button opens your mail client with the text already
+  filled in — nothing is sent from this page, and nothing is stored here.
+  If that is inconvenient, write to
+  <a href="mailto:clipdesk.app@gmail.com">clipdesk.app@gmail.com</a> directly.</p>
+
+  <footer>
+    <a href="./">Privacy policy</a> ·
+    <a href="https://chromewebstore.google.com/detail/ibnenkfapdlnbnfboehbbfahijidlkff">Clip Desk in the Chrome Web Store</a>
+  </footer>
+</section>
+
+<!-- ------------------------------------------------------------- Русский -->
+<section id="ru" hidden>
+  <h1>Clip Desk удалён. Что пошло не так?</h1>
+  <p class="lead">Один вопрос — и он правда влияет на то, что будет сделано
+  дальше. Расширение ничего не отслеживает, поэтому эта страница —
+  единственный способ вас услышать.</p>
+  <p class="switch"><a href="?lang=en">English version</a></p>
+
+  <form data-form="ru">
+    <fieldset>
+      <label><input type="radio" name="reason" value="Не заработало / не вышло войти"> Не заработало — не вышло войти или синхронизироваться</label>
+      <label><input type="radio" name="reason" value="Слишком медленно"> Слишком медленно или прочитало не весь архив</label>
+      <label><input type="radio" name="reason" value="Не хватило возможности"> Не хватило нужной возможности</label>
+      <label><input type="radio" name="reason" value="Не то, что ожидал"> Не то, что ожидалось по описанию в магазине</label>
+      <label><input type="radio" name="reason" value="Просто посмотреть / больше не нужно"> Просто посмотрел или больше не нужно</label>
+      <label><input type="radio" name="reason" value="Другое"> Другое</label>
+    </fieldset>
+
+    <textarea name="comment" placeholder="Что случилось, своими словами. Это и есть самая полезная часть."></textarea>
+    <br>
+    <button type="submit" class="send">Отправить</button>
+  </form>
+
+  <p class="note">Кнопка открывает почтовый клиент с уже готовым письмом —
+  сама страница ничего не отправляет и ничего не хранит. Если так неудобно,
+  напишите на <a href="mailto:clipdesk.app@gmail.com">clipdesk.app@gmail.com</a>.</p>
+
+  <footer>
+    <a href="./">Политика конфиденциальности</a> ·
+    <a href="https://chromewebstore.google.com/detail/ibnenkfapdlnbnfboehbbfahijidlkff">Clip Desk в Chrome Web Store</a>
+  </footer>
+</section>
+
+<script>
+  // Язык и версию подставляет само расширение при удалении. Русский показываем
+  // и тем, у кого браузер на ru-*, — параметра может не быть, если человек
+  // пришёл сюда по прямой ссылке.
+  var params = new URLSearchParams(location.search);
+  var lang = (params.get('lang') || navigator.language || 'en').slice(0, 2);
+  var version = params.get('v') || 'unknown';
+  var ru = lang === 'ru';
+
+  document.getElementById('ru').hidden = !ru;
+  document.getElementById('en').hidden = ru;
+  document.documentElement.lang = ru ? 'ru' : 'en';
+  document.title = ru ? 'Clip Desk — удалён' : 'Clip Desk — uninstalled';
+
+  document.querySelectorAll('form').forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var isRu = form.dataset.form === 'ru';
+      var picked = form.querySelector('input[name="reason"]:checked');
+      var reason = picked ? picked.value : (isRu ? 'не выбрано' : 'not specified');
+      var comment = form.querySelector('textarea').value.trim();
+
+      var body = [
+        (isRu ? 'Причина: ' : 'Reason: ') + reason,
+        '',
+        comment,
+        '',
+        '---',
+        'Clip Desk ' + version + ' · ' + lang
+      ].join('\n');
+
+      location.href = 'mailto:clipdesk.app@gmail.com'
+        + '?subject=' + encodeURIComponent('Clip Desk ' + version + ' — uninstall feedback')
+        + '&body=' + encodeURIComponent(body);
+    });
+  });
+</script>
+
+</body>
+</html>
